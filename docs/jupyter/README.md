@@ -2,6 +2,12 @@
 
 - [https://www.anaconda.com/](https://www.anaconda.com/)
 - [https://www.anaconda.com/products/individual](https://www.anaconda.com/products/individual)
+- Start jupyter lab on commandline
+  ```
+  cd code/jupyternotebooks/
+  jupyter lab
+  ```
+- Local web notebook [http://localhost:8888/lab](http://localhost:8888/lab)
 ---
 - [https://jupyter.org/](https://jupyter.org/)
 - [jupyterlab - ReadTheDocs](https://jupyterlab.readthedocs.io/en/latest/)
