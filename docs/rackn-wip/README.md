@@ -18,13 +18,16 @@ Background:
   - [IPAM for DRP](https://gitlab.com/groups/rackn/-/epics/13)
   - [Handle UEFI Bootorder challenges](https://gitlab.com/groups/rackn/-/epics/6)
   - [OOBM Discovery](https://gitlab.com/groups/rackn/-/epics/15)
-- Other ADDO that caught my attention
+- Other ADDO sessions that caught my attention
   - [Using Kubernetes to Manage Cloud tc:32:27](https://youtu.be/z9Grmf64bJ0?t=1947)
-  - [Jupyter as Incident Response Tool ADDO Channel 1: Block 4 (2:30PM-6:30Pm ET) tc:0:0]()
+  - [From Oops to Ops: Incident Response with Jupyter Notebooks](https://youtu.be/dNNAEZEHD_c?t=10957)
+  - [Jupyter as Incident Response Tool](https://youtu.be/fQ0N43kPz9E?t=5084)
 
 
 ## Proposals
-
+1. Review and update "DRP Getting Started" to [Enhance Documentation](https://gitlab.com/groups/rackn/-/epics/58) with Jupyter notebooks and video tutorials.
+2. Building a bare metal ProxMox based cloud to test [Official ProxMox Support](https://gitlab.com/groups/rackn/-/epics/51) and [Enhance Documentation](https://gitlab.com/groups/rackn/-/epics/58).
+3. During cloud build use [Hardware certification / validation tests](https://gitlab.com/groups/rackn/-/epics/42), [Clould API for empty cluster](https://gitlab.com/groups/rackn/-/epics/47), [Disk Prep Enhancements](https://gitlab.com/groups/rackn/-/epics/40), [Add HPE ILO Reset support for hardware manipulation](https://gitlab.com/groups/rackn/-/epics/18) and possibly [IPAM for DRP](https://gitlab.com/groups/rackn/-/epics/13).
 
 ### ADDO index 
 - [ADDO Track 1 Block 1: 3:00AM-8:00AM](https://youtu.be/bZT67jy-AWc)
