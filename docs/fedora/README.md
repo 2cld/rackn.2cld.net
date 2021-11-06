@@ -39,7 +39,7 @@ sudo dnf group upgrade --with-optional Multimedia
     - [Install Chromium Link](https://docs.fedoraproject.org/en-US/quick-docs/installing-chromium-or-google-chrome-browsers/)
 
 ```
-dnf install chromium
-dnf update chromium
+sudo dnf install chromium
+sudo dnf update chromium
 ```
 
