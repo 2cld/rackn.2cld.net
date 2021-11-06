@@ -57,6 +57,8 @@ edit /etc/fstab to remove the swap entry comment out # /swap.img
 ```
 sudo kubeadm init --control-plane-endpoint kube-master:6443 --pod-network-cidr 10.10.0.0/16
 ```
+   - If kubeadm messes up [kubeadm reset -f](https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-reset/)
+   - Saved kubemaster-radmin-snapshot1 on catmini://Users/cat/VirtualBox VMs/kubeMaster
 
 9. Set the kubectl context auth to connect to the cluster(Only on Master node)
 ```
