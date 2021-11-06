@@ -43,5 +43,8 @@ sudo dnf install chromium
 sudo dnf update chromium
 ```
 
+- Fedora35radminsnapshot1
+
+- Install VirtualBox Guest Additions select Devices in VBox dropdown menu
 ## Fedora35 Snapshots
 -  Fedora35radminsnapshot1 - Location: catmini:/Users/cat/VirtualBox VMs/Fedora35/Snapshots
