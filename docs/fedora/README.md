@@ -43,3 +43,5 @@ sudo dnf install chromium
 sudo dnf update chromium
 ```
 
+## Fedora35 Snapshots
+-  Fedora35radminsnapshot1 - Location: catmini:/Users/cat/VirtualBox VMs/Fedora35/Snapshots
