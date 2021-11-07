@@ -7,6 +7,7 @@
   cd code/jupyternotebooks/
   jupyter lab
   ```
+  
 - Local web notebook [http://localhost:8888/lab](http://localhost:8888/lab)
 ---
 - [https://jupyter.org/](https://jupyter.org/)
@@ -21,10 +22,11 @@
 - [tbd]()
 
 ## Setup [Jupyter on k8s](https://medium.com/analytics-vidhya/deploying-standalone-jupyterlab-on-kubernetes-for-early-stage-startups-7a1468fae289)
-- Create jlab namespace 
+1. Create jlab namespace 
 ```
 kubectl create namespace jlab
 ```
+
 - Jupyterlab install
 ```
 kubectl apply -f jupyterlab-pvc.yaml
@@ -39,6 +41,23 @@ chmod 777 /home/jovyan
 # you must perform above step with `sleep infinity` in command
 # or can have init-container that does that for you
 ```
-- [jupyterlab-pvc.yaml](./jupyterlab-deployment.yaml)
-- [jupyterlab-deployment.yaml](./jupyterlab-deployment.yaml)
-- [jupyterlab-service.yaml](./jupyterlab-service.yaml)
+
+- [github raw - jupyterlab-pvc.yaml](https://raw.githubusercontent.com/2cld/rackn.2cld.net/main/docs/jupyter/jupyterlab-pvc.yaml)
+- [github raw - jupyterlab-deployment.yaml](https://raw.githubusercontent.com/2cld/rackn.2cld.net/main/docs/jupyter/jupyterlab-deployment.yaml)
+- [github raw - jupyterlab-service.yaml](https://raw.githubusercontent.com/2cld/rackn.2cld.net/main/docs/jupyter/jupyterlab-service.yaml)
+
+- Download from github using [wget and/or curl](https://gist.github.com/jwebcat/5122366)
+```
+wget --no-check-certificate --content-disposition https://raw.githubusercontent.com/2cld/rackn.2cld.net/main/docs/jupyter/jupyterlab-deployment.yaml
+# --no-check-cerftificate was necessary for me to have wget not puke about https
+curl -LJO https://raw.githubusercontent.com/2cld/rackn.2cld.net/main/docs/jupyter/jupyterlab-deployment.yaml
+
+```
+
+2. Get external-ip of your deployed service
+```
+kubectl get svc -n jlab
+```
+
+3. Navigate to the external-ip in your browser to access JupyterLab
+
