@@ -150,8 +150,31 @@ sudo kubeadm join --token TOKEN_ID CONTROL_PLANE_HOSTNAME:CONTROL_PLANE_PORT --d
    - Update kubework2
    ```
    radmin@kubework1:~$ sudo hostnamectl set-hostname kubework2
+   radmin@kubework1:~$ sudo dhclient -r
+   radmin@kubework1:~$ sudo dhclient
+   radmin@kubework1:~$ sudo kubeadm reset -f
    ```
-13. Want to run workloads on Master?(Only on Master Node)
+   - Create new token on kubemaster
+   ```
+   sudo kubeadm token create --description "kubework2 token"
+   sudo kubeadm token list
+   ```
+   - Run Join Node (above) on kubework2
+   ```
+   sudo kubeadm join --token cwekvr.nwul72bin71b1wk7 kubemaster:6443 --discovery-token-ca-cert-hash sha256:a68afe46f0e77e2f533eaa8988546639fa9ba03a401ea7a8e5643706b6e743e6
+   ```
+   - Verify nodes running on kubemaster
+   ```   
+   radmin@kubemaster:~$ kubectl get nodes
+   NAME         STATUS   ROLES    AGE     VERSION
+   kubemaster   Ready    master   5h22m   v1.18.1
+   kubework1    Ready    <none>   118m    v1.18.1
+   kubework2    Ready    <none>   28s     v1.18.1
+   radmin@kubemaster:~$ 
+   ```
+   - Saved kubework2-radmin-snapshot1 on catmini://Users/cat/VirtualBox VMs/kubeWork2
+
+13. Want to run workloads on Master? (Only on Master Node) I rather not do this
 ```
 kubectl taint nodes --all node-role.kubernetes.io/master-
 ```
