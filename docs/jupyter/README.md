@@ -19,3 +19,26 @@
 - [tbd]()
 - [FULL-FEATURED BRIGHT CLUSTER MANAGEMENT SOFTWARE FOR CLUSTERS OF UP TO 8 NODES](https://www.brightcomputing.com/easy8)
 - [tbd]()
+
+## Setup [Jupyter on k8s](https://medium.com/analytics-vidhya/deploying-standalone-jupyterlab-on-kubernetes-for-early-stage-startups-7a1468fae289)
+- Create jlab namespace 
+```
+kubectl create namespace jlab
+```
+- Jupyterlab install
+```
+kubectl apply -f jupyterlab-pvc.yaml
+kubectl apply -f jupyterlab-deployment.yaml
+kubectl apply -f jupyterlab-service.yaml
+
+# change permission of home folder in pvc 
+# since newly created pvc don't give permission 
+# to jupyter user (jovian) to create notebook files
+chmod 777 /home/jovyan
+
+# you must perform above step with `sleep infinity` in command
+# or can have init-container that does that for you
+```
+- [jupyterlab-pvc.yaml](./jupyterlab-deployment.yaml)
+- [jupyterlab-deployment.yaml](./jupyterlab-deployment.yaml)
+- [jupyterlab-service.yaml](./jupyterlab-service.yaml)
